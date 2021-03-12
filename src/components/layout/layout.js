@@ -1,11 +1,15 @@
+import useStyle from './styles'
 
-function App() {
+const Layout = ()=> {
+
+    const classes = useStyle();
+
     return (
-      <div>
+      <div className = {classes.root}>
         salam
       </div>
     );
   }
   
-  export default App;
+  export default Layout;
   

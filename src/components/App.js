@@ -1,9 +1,8 @@
+import Layout from './layout/layout'
 
-function App() {
+const App = ()=>{
   return (
-    <div>
-      salam
-    </div>
+    <Layout/>
   );
 }
 
