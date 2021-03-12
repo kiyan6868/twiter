@@ -6,7 +6,7 @@ const LeftSidebar = ()=>{
    const classes = useStyle() ;
   return (
     <div className={classes.LeftSidebar}>
-        left side bar
+        منوی سمت چپ
     </div>
   );
 }
