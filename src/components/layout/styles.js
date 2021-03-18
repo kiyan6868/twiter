@@ -83,8 +83,8 @@ const useStyle = makeStyles(Theme=>({
         borderRadius : '2.5rem',
         marginTop : '15px'
     },
-    khabrnegarItem : {
-        borderBottom : '1px solid gray'
+    buttonBase : {
+        width : '100%'
     }
 }))
 

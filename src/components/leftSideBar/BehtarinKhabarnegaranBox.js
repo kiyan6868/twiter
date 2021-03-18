@@ -1,6 +1,21 @@
-import { Grid, Typography } from '@material-ui/core';
+import {Divider, Grid, Typography} from '@material-ui/core'
 import useStyle from '../layout/styles'
+import BehtarinKhabarnegaranList from './BehtarinKhabarnegaranList';
 
+const BartarinKhabarnegaranListData = [
+    {
+        id : 1,
+        'image' : '',
+        'userName' : 'علی عسگری',
+        'userId' : '@ali.asgari'
+    },
+    {
+        id : 2,
+        'image' : '',
+        'userName' : 'شعید احمدی',
+        'userId' : '@said.ahmadi'
+    }
+]
 
 
 const BehtarinKhabarnegaranBox = ()=>{
@@ -8,28 +23,22 @@ const BehtarinKhabarnegaranBox = ()=>{
    const classes = useStyle() ;
   return (
     <Grid container direction={'column'} className={classes.behtarinKhabarnegaranBox}>
-        <Grid item className={classes.khabrnegarItem}>
+        <Grid item>
             <Typography  className={classes.khabarnegaranText}>بهترین خبرنگاران</Typography>
         </Grid>
+        <Divider/>
         <Grid item>
-            <Grid container direction={'row'} alignItems={'center'} className={classes.khabrnegarItem}>
-                <Grid item>
-                    <div className={classes.khabrnegaranImage}></div>
-                </Grid>
-                <Grid item>
-                    <Typography>هادی غسگری</Typography>
-                    <Typography className={classes.userIdText}>@hadi</Typography>
-                </Grid>
-            </Grid>
-            <Grid container direction={'row'} alignItems={'center'}>
-                <Grid item>
-                    <div className={classes.khabrnegaranImage}></div>
-                </Grid>
-                <Grid item>
-                    <Typography>غلی اصغزی</Typography>
-                    <Typography className={classes.userIdText}>@ali</Typography>
-                </Grid>
-            </Grid>
+            {
+                BartarinKhabarnegaranListData.map((item,index)=>
+                    <>
+                        <BehtarinKhabarnegaranList userName={item.userName} userId={item.userId}/>
+                        {index!==BartarinKhabarnegaranListData.length-1 && 
+                        <Divider/>
+                        }
+                    </>
+                )
+            }
+            
         </Grid>
     </Grid>
 
