@@ -18,7 +18,8 @@ const useStyle = makeStyles(Theme=>({
         padding : '0 20px 0 20px'
     },
     MainPart : {
-        flex : 1
+        flex : 1,
+        overflowY : 'auto'
     },
     divider : {
         backgroundColor : Theme.palette.primary.main,
@@ -85,7 +86,72 @@ const useStyle = makeStyles(Theme=>({
     },
     buttonBase : {
         width : '100%'
-    }
+    },
+    homeIcon : {
+        width : '1.5rem',
+        height : '1.5rem',
+        margin : '1rem 1rem'
+    },
+    headerTitle : {
+        fontSize : '1.2rem',
+        fontWeight : 600
+    },
+    NewTweet : {
+        backgroundColor : "#e6e6e6"
+    },
+    texBoxOfTwit : {
+        border : 'none',
+        fontFamily : 'shabnam',
+        flex : 1,
+        marginLeft : '1rem',
+        "&:focus":{
+            outline : 'unset'
+        },
+        resize : 'none'
+
+    },
+    twitBotton : {
+        color : 'white',
+        marginLeft : '1rem',
+        marginTop : '-1.2rem',
+        borderRadius : '1rem',
+        marginBottom : '1rem',
+        fontFamily : 'shabnam',
+        minHeight : '30px',
+        minWidth : '5rem',
+        height : '30px'
+    },
+    pictureIcon : {
+        width : '2rem',
+        height : '2rem',
+        marginTop : '-1.8rem',
+        marginLeft : '1rem',
+        borderRadius : "50%",
+        border : '0.5px solid #3337',
+        padding : '0.3rem',
+        cursor : 'pointer'
+    },
+    LikeNumber : {
+        marginTop : '-1.3rem',
+        marginLeft : '0.8rem',
+        color : Theme.palette.text.hint,
+        fontSize : '0.8rem'
+    },
+    userIdInHarTwit : {
+        color : 'gray',
+        fontSize : '0.6rem',
+        marginRight : '0.5rem'
+    },
+    YekTwit : {
+        marginRight : '6rem',
+        marginLeft : '2rem',
+        marginBottom : '2.3rem'
+    },
+    DividereBeyneTwitHa : {
+        color : '#e6e6e6',
+        height : '0.5rem'
+    },
+    
 }))
 
 export default useStyle;
